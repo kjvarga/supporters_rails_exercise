@@ -1,6 +1,7 @@
-class NetworkController < ApplicationController
+require 'network'
 
+class NetworkController < ApplicationController
   def index
-  	render json: File.read("./app/mocks/network-mock.json")
+  	render json: Network.fetch_by_user_id(1234)
   end
 end
