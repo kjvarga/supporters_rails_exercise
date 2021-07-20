@@ -1,4 +1,8 @@
-FROM ruby:2.5.1
+FROM ruby:2.5.1-alpine
+
+RUN apk update \
+    && apk upgrade \
+    && apk add --update --no-cache build-base sqlite-dev tzdata
 
 WORKDIR /usr/src/app
 
@@ -7,8 +11,8 @@ RUN bundle install
 
 COPY . .
 
-RUN bin/rails db:migrate RAILS_ENV=development &&\
-    bundle exec rake db:seed
+RUN bin/rails db:migrate RAILS_ENV=development \
+    && bundle exec rake db:seed
 
 EXPOSE 3000
 

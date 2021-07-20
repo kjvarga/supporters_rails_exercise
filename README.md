@@ -23,6 +23,8 @@ You can check it's working with `curl localhost:3000`
 * Build & run `docker-compose up`
 * Run test `docker-compose run supporters bundle exec rspec`
 
+To execute any command on the running container just do `docker-compose run supporters <command>`
+
 ## Manual Installation 
 
 ### Dependancies and configuration
