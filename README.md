@@ -9,7 +9,7 @@ Supporters Rails Exercice is the basic setup needed for our live coding exercice
 * The app is running on port 3000
 * The app will restart on code change
 
-## Build & Run
+## Option 1 : Docker installation
 
 If you have docker, simply use Makefile alias : 
 
@@ -18,18 +18,16 @@ If you have docker, simply use Makefile alias :
 
 You can check it's working with `curl localhost:3000`
 
-**Your local code change will be reflected automatically on the container.**
-
-## Docker installation
+Alternativelly you can use compose directly : 
 
 * Build & run `docker-compose up`
 * Run test `docker-compose run supporters bundle exec rspec`
 
 To execute any command on the running container just do `docker-compose run supporters <command>`
 
-Your local code change will be reflected automatically on the container.
+**Your local code change will be reflected automatically on the container.**
 
-## Manual Installation 
+## Option 2 : Manual Installation 
 
 ### Dependancies and configuration
 
