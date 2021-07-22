@@ -25,6 +25,8 @@ You can check it's working with `curl localhost:3000`
 
 To execute any command on the running container just do `docker-compose run supporters <command>`
 
+Your local code change will be reflected automatically on the container.
+
 ## Manual Installation 
 
 ### Dependancies and configuration
