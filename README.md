@@ -18,6 +18,8 @@ If you have docker, simply use Makefile alias :
 
 You can check it's working with `curl localhost:3000`
 
+**Your local code change will be reflected automatically on the container.**
+
 ## Docker installation
 
 * Build & run `docker-compose up`
