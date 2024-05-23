@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Petition, type: :model do
+RSpec.describe Petition do
   it 'passes' do
     expect(Petition).to be_present
   end
