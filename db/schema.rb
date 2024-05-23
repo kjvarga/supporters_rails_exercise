@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_22_040235) do
+ActiveRecord::Schema.define(version: 2024_05_23_204715) do
+
+  create_table "follows", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "starter_urn"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "petitions", force: :cascade do |t|
     t.string "starter_urn"
