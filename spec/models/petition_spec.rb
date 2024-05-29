@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe Petition do
+RSpec.describe Petition do
   it 'passes' do
-    expect(true).to be(true)
+    expect(Petition).to be_present
   end
 end
