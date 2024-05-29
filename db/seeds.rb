@@ -15,47 +15,58 @@ Petition.create(
     {
       starter_urn: STARTER_URNS[0],
       title: 'Save our oceans',
-      body: 'Lorem ipsum...', created_at: Time.new(2020, 12, 24)
+      body: 'Lorem ipsum...',
+      created_at: Time.parse('2020-12-24 12:00:00'),
+      updated_at: 1.hours.ago
     },
     {
       starter_urn: STARTER_URNS[1],
       title: 'Sign for climate change',
-      body: 'Lorem ipsum...', created_at: Time.now - 2.day
+      body: 'Lorem ipsum...',
+      created_at: 2.days.ago,
+      updated_at: 2.days.ago
     },
     {
       starter_urn: STARTER_URNS[2],
       title: 'Fight for justice',
-      body: 'Lorem ipsum...', created_at: Time.now - 1.day
+      body: 'Lorem ipsum...',
+      created_at: 1.days.ago,
+      updated_at: 1.days.ago
     },
     {
       starter_urn: STARTER_URNS[0],
       title: 'Ban the Cruel Sale & Trade of Shark Fins',
       body: 'Lorem ipsum...',
-      created_at: Time.new(2020, 0o6, 0o1)
+      created_at: Time.parse('2020-06-01 00:00:00'),
+      updated_at: Time.parse('2021-01-01 12:00:00')
     },
     {
       starter_urn: STARTER_URNS[3],
       title: 'Seatbelts for Canadian School Buses, Now!',
       body: 'Lorem ipsum...',
-      created_at: Time.now - 3.day
+      created_at: 3.days.ago,
+      updated_at: 3.days.ago
     },
     {
       starter_urn: STARTER_URNS[2],
       title: 'COVID-19 funding for Indigenous communities',
       body: 'Lorem ipsum...',
-      created_at: Time.now - 4.day
+      created_at: 4.days.ago,
+      updated_at: 4.days.ago
     },
     {
       starter_urn: STARTER_URNS[4],
       title: 'Safer Personal Protective Equipment (PPE) for NHS workers',
       body: 'Lorem ipsum...',
-      created_at: Time.now - 5.day
+      created_at: 5.days.ago,
+      updated_at: 5.days.ago
     },
     {
       starter_urn: STARTER_URNS[5],
       title: 'Cancer patients exempted from travel restrictions',
       body: 'Lorem ipsum...',
-      created_at: Time.now - 6.day
+      created_at: 6.days.ago,
+      updated_at: 2.hours.ago
     }
   ]
 )
