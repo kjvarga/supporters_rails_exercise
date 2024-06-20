@@ -1,19 +1,27 @@
-FROM ruby:2.5.1-alpine
+FROM ruby:3.2.2-alpine AS base
 
 RUN apk update \
     && apk upgrade \
-    && apk add --update --no-cache build-base sqlite-dev tzdata
+    && apk add --update --no-cache \
+    build-base \
+    sqlite \
+    sqlite-dev \
+    tzdata
 
 WORKDIR /usr/src/app
 
+RUN gem update --system
 COPY Gemfile ./
 RUN bundle install 
 
 COPY . .
 
-RUN bin/rails db:migrate RAILS_ENV=development \
-    && bundle exec rake db:seed
+FROM base AS db
+
+RUN RAILS_ENV=development bundle exec rails db:setup
+
+FROM db AS server
 
 EXPOSE 3000
 
-CMD [ "bin/rails", "s", "-b", "0.0.0.0" ]
+CMD [ "bundle", "exec", "bin/rails", "s", "-p", "3000", "-b", "0.0.0.0" ]
